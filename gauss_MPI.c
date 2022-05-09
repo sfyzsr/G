@@ -75,10 +75,12 @@ void initializeRandomMatrix() {
     double start_time = MPI_Wtime();
 
     int seed = (int)((start_time - (int)start_time) * 1000000);
+    seed = 1;
     printf("seed = %d\n", seed);
     srand(seed);
 
-    n = rand()%21+8;
+    // n = rand()%21+8;
+    n = 30;
 
     int i, row, col;
 
