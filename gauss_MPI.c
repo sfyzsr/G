@@ -43,7 +43,7 @@ int main(int argc, char **argv) {
        
         initializeRandomMatrix();
         printf("Initial argumented matrix: \n");
-        printMatrix();
+        // printMatrix();
     }
 
     // Gaussian Elimination
@@ -54,7 +54,7 @@ int main(int argc, char **argv) {
 
         backSubstitution();
 
-        printMatrix();
+        // printMatrix();
         printSolution();
 
         gettimeofday(&wallEnd, NULL); // end time
@@ -80,7 +80,7 @@ void initializeRandomMatrix() {
     srand(seed);
 
     // n = rand()%21+8;
-    n = 30;
+    n = 80;
 
     int i, row, col;
 
