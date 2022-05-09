@@ -80,7 +80,7 @@ void initializeRandomMatrix() {
     srand(seed);
 
     // n = rand()%21+8;
-    n = 30
+    n = 30;
 
     int i, row, col;
 
