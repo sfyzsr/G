@@ -73,13 +73,12 @@ void initializeRandomMatrix() {
 
     // Since the total time is small, I use the decimal part of the double as random seed
     double start_time = MPI_Wtime();
-
     int seed = (int)((start_time - (int)start_time) * 1000000);
     // seed = 1;   // set 1 to test
     printf("seed = %d\n", seed);
     srand(seed);
 
-    // n = rand()%21+8;
+    n = rand()%21+8;
     // n = 30;     // set 30 to test
 
     int i, row, col;
