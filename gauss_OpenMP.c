@@ -90,7 +90,7 @@ void gauss() {
 
     // Forward Elimination, form the upper Triangular matrix
     for (k = 0; k<n-1 ; k++){
-    #pragma omp parallel for shared(A,k,n) private(i,j) schedule(static)
+    #pragma omp parallel for shared(A,k,n) private(i,j)
         for (i = k+1; i<n; i++){
 
             // Store the pivot into the lower Triangular matrix to save the iteration steps
