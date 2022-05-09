@@ -51,10 +51,12 @@ void initializeRandomMatrix() {
     double start_time = omp_get_wtime();
     printf("%lf\n", start_time);
     int seed = (int)((start_time - (int)start_time) * 1000000);
+    seed = 1;
     printf("%d\n", seed);
     srand(seed);
 
-    n = rand()%21+8;
+    // n = rand()%21+8;
+    n = 30;
 
     int i, row, col;
 
