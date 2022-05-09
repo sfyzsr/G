@@ -43,8 +43,7 @@ mpiicc -O0 $SRC -o $EXE
 
 
 if test -x $EXE; then
-      # run the number of processes times 
-      # add 1 process per run
+      # run the number of processes times, add 1 process per run
       for k in $(seq 1 $numMPI); do mpirun -np ${k} ./${EXE}; echo ------------------------------------; done
 
 else

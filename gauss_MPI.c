@@ -3,7 +3,7 @@
 #include <mpi.h>
 #include <sys/time.h>
 
-// Initialize the row (number of the variables in linear equations)
+// Initialize the row 
 int n;
 
 // Initialize augmented matrix with big capacity
@@ -33,7 +33,7 @@ int main(int argc, char **argv) {
     // Get total process
     MPI_Comm_size(MPI_COMM_WORLD, &comm_sz);
     
-    printf("Use %d\n process", comm_sz);
+    printf("Use %d process\n", comm_sz);
 
     // Process 0 initialze matrix
     if(my_rank == 0 ){
@@ -73,9 +73,9 @@ void initializeRandomMatrix() {
 
     // Since the total time is small, I use the decimal part of the double as random seed
     double start_time = MPI_Wtime();
-    printf("%lf\n", start_time);
+
     int seed = (int)((start_time - (int)start_time) * 1000000);
-    printf("%d\n", seed);
+    printf("seed = %d\n", seed);
     srand(seed);
 
     n = rand()%21+8;
